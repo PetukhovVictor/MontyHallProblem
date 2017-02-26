@@ -1,7 +1,7 @@
 import {RandomGenerator} from "./RandomGenerator";
 
 /**
- * Типы вещей, которые могу находиться за дверьми.
+ * Типы вещей, которые могут находиться за дверьми.
  */
 export enum EThingType {
     /**
