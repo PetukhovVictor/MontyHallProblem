@@ -3,7 +3,7 @@ import {RandomGenerator} from "./RandomGenerator";
 /**
  * Типы вещей, которые могу находиться за дверьми.
  */
-export enum ThingType {
+export enum EThingType {
     /**
      * Машина.
      */
@@ -67,7 +67,7 @@ export class MontyHallProblem {
      *
      * @type number
      */
-    private winningThing: ThingType;
+    private winningThing: EThingType;
 
     /**
      * Конструктор.
@@ -85,11 +85,11 @@ export class MontyHallProblem {
     /**
      * Расстановка вещей за двери.
      *
-     * @param {ThingType} thingType Тип расставляемых вещей.
+     * @param {EThingType} EThingType Тип расставляемых вещей.
      */
-    private arrange(thingType: ThingType) {
-        for (let i = 0; i < this.numbers[thingType]; i++) {
-            this.doors[this.arrangeRandomGenerator.get()] = thingType;
+    private arrange(EThingType: EThingType) {
+        for (let i = 0; i < this.numbers[EThingType]; i++) {
+            this.doors[this.arrangeRandomGenerator.get()] = EThingType;
         }
     }
 
