@@ -1,6 +1,19 @@
 import {ThingType, MontyHallProblem} from "./lib/MontyHallProblem";
 
 /**
+ * Перечисление количеств вещей разных типов за дверьми.
+ */
+const THINGS_COUNT = {
+    [ThingType.CAR]: 1,
+    [ThingType.GOAT]: 2
+};
+
+/**
+ * Количество открываемых дверей ведущим.
+ */
+const OPENS_DOORS_COUNT = 1;
+
+/**
  * Перечисление вариантов статистик.
  */
 enum EStatisticType {
@@ -34,11 +47,8 @@ function experimentRun(experimentsNumber: number, changeChoose: boolean = false)
     for (var i = 0; i < experimentsNumber; i++) {
         // Инициализируем функционал игры.
         const mhp = new MontyHallProblem({
-            things: {
-                [ThingType.CAR]: 1,
-                [ThingType.GOAT]: 2
-            },
-            opensDoors: 1,
+            things: THINGS_COUNT,
+            opensDoors: OPENS_DOORS_COUNT,
             winningThing: ThingType.CAR
         });
 
